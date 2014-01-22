@@ -3,6 +3,7 @@ package org.dp;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -11,7 +12,8 @@ import java.math.BigDecimal;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=TestContextConfiguration.class)
+@ContextConfiguration(classes=TestMockConfiguration.class)
+@ActiveProfiles(SpringProfiles.TEST)
 public class RiskOfficerIntegrationTest extends TestCase {
 
     @Inject
